@@ -1,0 +1,120 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background:rgb(243, 243, 243);
+}
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    margin-top: 20px;
+}
+header #logo {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #cacaca4c;
+    border-radius: 100px;
+}
+header nav ul li a  {
+    display: inline-block;
+    color: #000000;
+    padding: 5px 0;
+    font-size: 18px;
+    margin: 0 20px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+header nav ul li a:hover, .a-color {
+ color: #609fff;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+#sign-up{
+    color: white;
+    background-color: #508de8;
+    text-transform: uppercase;
+    font-size: 21px;
+    transition: 0.2ms;
+    padding: 15px 25px;
+    border-radius: 70px;
+}
+#sign-up:hover{
+    background-color: #1f6de3;
+}
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger div {
+        background: rgb(0, 0, 0);
+        margin-right: 3px;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 100px;
+        height: 100%;
+        width: 50%;
+        border-top-right-radius: 70px;
+        border-bottom-right-radius: 70px;
+        background:#cacaca4c;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    body{
+        overflow: scroll;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+        background-color: transparent;
+    }
+  #logo{
+    color: rgb(0, 0, 0);
+  }
+  #sign-up{
+    background-color: #cacaca4c;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 70px;
+  }
+  #sign-up:hover{
+    background-color: #cacaca4c;
+    color: black;
+  }
+    header nav ul li a {
+        margin: 5px 0;
+        color: rgb(0, 0, 0);
+    }
+}
